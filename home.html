@@ -1,4 +1,26 @@
-<x-title>Adote um Dog</x-title>
-<x-include src="/header.html"></x-include>
+<x-title value="Quero adotar um Dog"></x-title>
+<x-container>
+  <x-heading>Home</x-heading>
+  <x-input name="raca">
+    <x-label>Raca de Cachorro</x-label>
+  </x-input>
 
-<x-heading>Home</x-heading>
+  <x-render>
+    <template>
+      <x-card width="fill">
+        <x-stack width="fill" justify="space-between">
+          <x-text>{name}</x-text><br />
+          <x-link href="/quero-adotar/{id}">
+            Quero adotar
+            <x-icon use="arrow_outward"></x-icon>
+          </x-link>
+        </x-stack>
+      </x-card>
+    </template>
+    <x-on value="api/ok:method/render"></x-on>
+  </x-render>
+
+  <x-fetch name="api" url="https://api.thedogapi.com/v1/breeds/search?q={}">
+    <x-on value="raca/change:method/get"></x-on>
+  </x-fetch>
+</x-container>

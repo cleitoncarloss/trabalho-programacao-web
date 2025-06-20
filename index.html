@@ -1,17 +1,31 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/@nodusjs/x@0.16.6/dist/x.css" rel="stylesheet" async />
-  </head>
-  <body>
-    <x-include>
-      <x-route path="/" src="/home.html"></x-route>
-      <x-route path="/quero-adotar/:id" src="/contact.html"></x-route>
-      <x-route path="/sobre" src="/about.html"></x-route>
-    </x-include>
-    <script src="https://cdn.jsdelivr.net/npm/@nodusjs/x@0.16.6/dist/x.js" type="module" async></script>
-  </body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quero adotar um dog</title>
+  <link href="https://cdn.jsdelivr.net/npm/@nodusjs/x@0.16.9/dist/x.css" rel="stylesheet" async />
+  <style>
+    :not(:defined) {
+      visibility: hidden;
+    }
+
+    body {
+      color-scheme: light dark;
+      background-color: light-dark(#FCFCFD, #0C111D);
+      margin: 0;
+      padding: 0;
+      transition: all 0.2s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <x-include src="/header.html"></x-include>
+  <x-include>
+    <x-route path="/" src="/home.html"></x-route>
+    <x-route path="/quero-adotar/:id" src="/contact.html"></x-route>
+    <x-route path="/sobre" src="/about.html"></x-route>
+  </x-include>
+  <script src="https://cdn.jsdelivr.net/npm/@nodusjs/x@0.16.9/dist/x.js" type="module" async></script>
+</body>
 </html>
