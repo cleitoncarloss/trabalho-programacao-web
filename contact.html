@@ -1,4 +1,21 @@
 <x-title value="Contato"></x-title>
 <x-container>
-  <x-heading>Contato</x-heading>
+  <x-stack direction="column" spacing="xs">
+    <x-heading>Contato</x-heading>
+    <x-form>
+      <template>
+        <x-stack direction="column" spacing="xs">
+          <x-input>
+            <x-label>Nome</x-label>
+            <x-validity state="valueMissing">Nome é obrigatorio</x-validity>
+          </x-input>
+          <x-input>
+            <x-label>E-mail</x-label>
+            <x-validity state="valueMissing">E-mail é obrigatorio</x-validity>
+          </x-input>
+          <x-button width="320px">Enviar</x-button>
+        </x-stack>
+      </template>
+    </x-form>
+  </x-stack>
 </x-container>
