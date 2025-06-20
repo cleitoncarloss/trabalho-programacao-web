@@ -2,3 +2,24 @@
 <x-container>
   <x-heading>Contato</x-heading>
 </x-container>
+
+<x-render>
+  <template>
+    <img src="{url}" />
+  </template>
+  <x-on value="image/ok:method/render"></x-on>
+</x-render>
+
+<x-render>
+  <template>
+    <x-heading>{name}</x-heading>
+  </template>
+  <x-on value="dog/ok:method/render"></x-on>
+</x-render>
+
+<x-fetch name="dog" url="https://api.thedogapi.com/v1/breeds/{}">
+</x-fetch>
+
+<x-fetch name="image" url="https://api.thedogapi.com/v1/images/{reference_image_id}">
+  <x-on value="dog/ok:method/get"></x-on>
+</x-fetch>
