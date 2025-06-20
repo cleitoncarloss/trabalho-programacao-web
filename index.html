@@ -8,8 +8,9 @@
   </head>
   <body>
     <x-include>
-      <x-route path="/" src="index.html">home</x-route>
-      <x-route path="/contato" src="form.html">formulario</x-route>
+      <x-route path="/" src="/home.html"></x-route>
+      <x-route path="/quero-adotar/:id" src="/contact.html"></x-route>
+      <x-route path="/sobre" src="/about.html"></x-route>
     </x-include>
     <script src="https://cdn.jsdelivr.net/npm/@nodusjs/x@0.15.0/dist/x.js" type="module" async></script>
 
