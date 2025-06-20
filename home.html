@@ -1,11 +1,13 @@
 <x-title value="Quero adotar um Dog"></x-title>
 <x-container>
-  <x-stack direction="column" spacing="xs">
-    <x-heading>Home</x-heading>
-    <x-input name="specie">
-      <x-label>Raca de Cachorro</x-label>
-    </x-input>
-  </x-stack>
+  <x-card width="fill">
+    <x-stack direction="column" align="center" justify="center" height="400px" width="fill">
+      <x-input name="specie">
+        <x-label>Qual tipo de Cachorro voce quer adotar?</x-label>
+      </x-input>
+    </x-stack>
+  </x-card>
+
   <x-render>
     <template>
       <x-card width="fill">
