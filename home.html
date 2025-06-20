@@ -2,7 +2,7 @@
 <x-container>
   <x-stack direction="column" spacing="xs">
     <x-heading>Home</x-heading>
-    <x-input name="raca">
+    <x-input name="specie">
       <x-label>Raca de Cachorro</x-label>
     </x-input>
   </x-stack>
@@ -18,10 +18,10 @@
         </x-stack>
       </x-card>
     </template>
-    <x-on value="api/ok:method/render"></x-on>
+    <x-on value="dogs/ok:method/render"></x-on>
   </x-render>
 
-  <x-fetch name="api" url="https://api.thedogapi.com/v1/breeds/search?q={}">
-    <x-on value="raca/change:method/get"></x-on>
+  <x-fetch name="dogs" url="https://api.thedogapi.com/v1/breeds/search?q={}">
+    <x-on value="specie/change:method/get"></x-on>
   </x-fetch>
 </x-container>
