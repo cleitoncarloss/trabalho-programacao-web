@@ -33,8 +33,11 @@
 </x-container>
 
 <x-fetch name="dog" url="https://api.thedogapi.com/v1/breeds/{}">
+  <x-on value="selected/ok:method/get"></x-on>
 </x-fetch>
 
 <x-fetch name="image" url="https://api.thedogapi.com/v1/images/{reference_image_id}">
   <x-on value="dog/ok:method/get"></x-on>
 </x-fetch>
+
+<x-macro name="selected" execute="X.params.id"></x-macro>
