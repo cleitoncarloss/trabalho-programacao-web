@@ -1,21 +1,36 @@
 <x-title value="Contato"></x-title>
 <x-container>
-  <x-heading>Contato</x-heading>
+  <x-stack direction="column" spacing="xs">
+    <x-heading>Contato</x-heading>
+    <x-render>
+      <template>
+        <img src="{url}" />
+      </template>
+      <x-on value="image/ok:method/render"></x-on>
+    </x-render>
+    <x-render>
+      <template>
+        <x-heading>{name}</x-heading>
+      </template>
+      <x-on value="dog/ok:method/render"></x-on>
+    </x-render>
+    <x-form>
+      <template>
+        <x-stack direction="column" spacing="xs">
+          <x-input>
+            <x-label>Nome</x-label>
+            <x-validity state="valueMissing">Nome é obrigatorio</x-validity>
+          </x-input>
+          <x-input>
+            <x-label>E-mail</x-label>
+            <x-validity state="valueMissing">E-mail é obrigatorio</x-validity>
+          </x-input>
+          <x-button width="320px">Enviar</x-button>
+        </x-stack>
+      </template>
+    </x-form>
+  </x-stack>
 </x-container>
-
-<x-render>
-  <template>
-    <img src="{url}" />
-  </template>
-  <x-on value="image/ok:method/render"></x-on>
-</x-render>
-
-<x-render>
-  <template>
-    <x-heading>{name}</x-heading>
-  </template>
-  <x-on value="dog/ok:method/render"></x-on>
-</x-render>
 
 <x-fetch name="dog" url="https://api.thedogapi.com/v1/breeds/{}">
 </x-fetch>
