@@ -2,12 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <link href="https://cdn.jsdelivr.net/npm/@nodusjs/x@0.15.0/dist/x.css" rel="stylesheet" async />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <header>
+      <x-stack justify="center">
+        <x-link size="md" href="index.html">Home</x-link>
+        <x-link size="md" href="/form.html">Formulário</x-link>
+        <x-link size="md" href="/formAction.html">Dados recebidos</x-link>
+        <x-link size="md" href="/about.html">Sobre</x-link>
+      </x-stack>
+    </header>
+    <script src="https://cdn.jsdelivr.net/npm/@nodusjs/x@0.15.0/dist/x.js" type="module" async></script>
+
   </body>
 </html>
