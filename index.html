@@ -7,14 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/@nodusjs/x@0.15.0/dist/x.css" rel="stylesheet" async />
   </head>
   <body>
-    <header>
-      <x-stack justify="center">
-        <x-link size="md" href="index.html">Home</x-link>
-        <x-link size="md" href="form.html">Formulário</x-link>
-        <x-link size="md" href="formAction.html">Dados recebidos</x-link>
-        <x-link size="md" href="about.html">Sobre</x-link>
-      </x-stack>
-    </header>
+    <x-include>
+      <x-route path="/" src="index.html">home</x-route>
+      <x-route path="/contato" src="form.html">formulario</x-route>
+    </x-include>
     <script src="https://cdn.jsdelivr.net/npm/@nodusjs/x@0.15.0/dist/x.js" type="module" async></script>
 
   </body>
