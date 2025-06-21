@@ -1,6 +1,6 @@
 {
 	"dependencies": {
-		"@nodusjs/x": "link:@nodusjs/x"
+		"@nodusjs/x": "*"
 	},
 	"name": "trabalho-programacao-web",
 	"private": true,

@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quero adotar um dog</title>
+  <link href="https://cdn.jsdelivr.net/npm/@nodusjs/x@0.17.4/dist/x.css" rel="stylesheet" async />
   <style>
     :not(:defined) {
       visibility: hidden;
@@ -25,9 +26,10 @@
     <x-route path="/quero-adotar/:id" src="/contact.html"></x-route>
     <x-route path="/sobre" src="/about.html"></x-route>
   </x-include>
-  <script type="module">
-    import '@nodusjs/x';
-    import '@nodusjs/x/dist/x.css';
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@nodusjs/x@0.17.4/dist/x.js" type="module" async></script>
+  <!-- <script type="module"> -->
+  <!--   import '@nodusjs/x'; -->
+  <!--   import '@nodusjs/x/dist/x.css'; -->
+  <!-- </script> -->
 </body>
 </html>
