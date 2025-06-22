@@ -25,6 +25,7 @@
       <x-on value="image/ok:method/render"></x-on>
     </x-render>
     <x-form>
+      <x-on value="x-form/submit:method/reset"></x-on>
       <template>
         <x-stack direction="column" spacing="xs">
           <x-input name="name" required>
@@ -40,9 +41,14 @@
             Quero adotar
             <x-icon use="sound_detection_dog_barking"></x-icon>
           </x-button>
+
         </x-stack>
       </template>
     </x-form>
+    <x-text color="success-primary" width="500px" hidden>
+      <x-on value="x-form/submit:attribute/hidden|not"></x-on>
+      Dados enviados com sucesso
+    </x-text>
   </x-stack>
 </x-container>
 
